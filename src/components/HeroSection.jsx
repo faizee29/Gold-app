@@ -101,18 +101,19 @@ export default function HeroSection({ bgImage, setBgImage, imagesLoaded, isBrown
           display: "grid",
           gridTemplateColumns: {
             xs: '1fr', // 1 per row on mobile
-            sm: '1fr 1fr', // 2 per row on small/medium
-            md: '1fr 1fr',
-            lg: '1fr 1fr 1fr 1fr' // 4 per row on large
+            sm: 'repeat(2, minmax(0, 1fr))', // 2 per row on small/medium
+            lg: 'repeat(4, minmax(0, 1fr))' // 4 per row on large
           },
-          gap: { xs: '20px', sm: '25px', md: '30px', lg: '40px' },
+          gap: { xs: '15px', sm: '20px', md: '25px', lg: '30px' },
           alignItems: 'center',
           justifyItems: 'center',
           zIndex: 2,
           width: '100%',
-          px: { xs: 2, sm: 3, md: 4 },
-          maxHeight: { xs: '60vh', sm: '50vh', md: 'auto' },
-          overflow: 'visible',
+          maxWidth: '100%',
+          px: { xs: 2, sm: 4, md: 6, lg: 8 },
+          mx: 'auto',
+          boxSizing: 'border-box',
+          overflow: 'hidden'
         }}
       >
         {/* Text Items */}
@@ -140,7 +141,7 @@ export default function HeroSection({ bgImage, setBgImage, imagesLoaded, isBrown
             WebkitFontSmoothing: 'antialiased',
             MozOsxFontSmoothing: 'grayscale',
             textAlign: { xs: "center", sm: "left" },
-            textShadow: "2px 2px 4px rgba(0,0,0,0.8)",
+            // textShadow: "2px 2px 4px rgba(0,0,0,0.8)",
             ml: { lg: 16, xl: 24 },
           }}
           onMouseEnter={() => setBgImage("main2")}
@@ -178,13 +179,13 @@ export default function HeroSection({ bgImage, setBgImage, imagesLoaded, isBrown
             WebkitFontSmoothing: 'antialiased',
             MozOsxFontSmoothing: 'grayscale',
             textAlign: { xs: "center", sm: "left" },
-            textShadow: "2px 2px 4px rgba(0,0,0,0.8)",
+            // textShadow: "2px 2px 4px rgba(0,0,0,0.8)",
             ml: { lg: 16, xl: 24 },
           }}
           onMouseEnter={() => setBgImage("main3")}
           onMouseLeave={() => setBgImage("main1")}
         >
-          Personalise
+          Personalized
           <br />
           Perfection
           <br />
@@ -216,7 +217,7 @@ export default function HeroSection({ bgImage, setBgImage, imagesLoaded, isBrown
             WebkitFontSmoothing: 'antialiased',
             MozOsxFontSmoothing: 'grayscale',
             textAlign: { xs: "center", sm: "left" },
-            textShadow: "2px 2px 4px rgba(0,0,0,0.8)",
+            // textShadow: "2px 2px 4px rgba(0,0,0,0.8)",
             ml: { lg: 16, xl: 24 },
           }}
           onMouseEnter={() => setBgImage("main4")}
@@ -254,7 +255,7 @@ export default function HeroSection({ bgImage, setBgImage, imagesLoaded, isBrown
             WebkitFontSmoothing: 'antialiased',
             MozOsxFontSmoothing: 'grayscale',
             textAlign: { xs: "center", sm: "left" },
-            textShadow: "2px 2px 4px rgba(0,0,0,0.8)",
+            // textShadow: "2px 2px 4px rgba(0,0,0,0.8)",
             ml: { lg: 16, xl: 24 },
           }}
           onMouseEnter={() => setBgImage("main2")}
@@ -278,7 +279,7 @@ export default function HeroSection({ bgImage, setBgImage, imagesLoaded, isBrown
           textAlign: "center",
           fontWeight: 'normal',
           fontFamily: 'BaketFashion-DemoVersion-Regular, serif',
-          textShadow: "2px 2px 4px rgba(0,0,0,0.8)",
+          // textShadow: "2px 2px 4px rgba(0,0,0,0.8)",
           zIndex: 10,
           fontSize: { xs: "2.3rem", sm: "3.5rem", md: "5.2rem", lg: "9rem", xl: "12rem" },
           whiteSpace: { xs: "normal", md: "nowrap" },
@@ -313,7 +314,7 @@ export default function HeroSection({ bgImage, setBgImage, imagesLoaded, isBrown
           sx={{
             color: "white",
             textAlign: "center",
-            textShadow: "2px 2px 4px rgba(0,0,0,0.8)",
+            // textShadow: "2px 2px 4px rgba(0,0,0,0.8)",
             fontSize: { xs: "0.8rem", sm: "1rem", md: "1.2rem", lg: "2rem" },
             // whiteSpace: { xs: "normal", md: "nowrap" },
             fontFamily: 'Century Gothic, Arial, sans-serif',

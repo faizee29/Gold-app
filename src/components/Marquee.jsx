@@ -6,11 +6,11 @@ export default function Marquee({ marqueeContainerRef, marqueeTextRef, marqueeDi
     <Box
       ref={marqueeContainerRef}
       sx={{
-        bottom: { xs: "20px", md: "30px" },
         backgroundColor: isBrownBgActive ? "#D2B49C" : "#f5f3f0",
         transition: "background 0.4s",
         left: 0,
-        width: "100vw",
+        maxWidth: "100vw",
+        overflow: "hidden",
         zIndex: 1,
         height: { xs: "2.5rem", sm: "3.5rem", md: "5rem" },
         display: "flex",
@@ -27,7 +27,7 @@ export default function Marquee({ marqueeContainerRef, marqueeTextRef, marqueeDi
           fontSize: { xs: "2rem", sm: "3rem", md: "4rem", lg: "8rem" },
           fontWeight: 'normal',
           color: "black",
-          fontFamily: "serif",
+          fontFamily: 'BaketFashion-DemoVersion-Regular, serif',
           my: { xs: 1, md: 2 },
           animation: marqueeDistance !== 0 ? `marqueeMove 4s linear infinite alternate` : "none",
           '@keyframes marqueeMove': {

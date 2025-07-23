@@ -10,7 +10,6 @@ export default function Footer() {
   return (
     <Box
       sx={{
-        width: "100%",
         bgcolor: "black",
         color: "white",
         pt: { xs: 6, md: 8 },

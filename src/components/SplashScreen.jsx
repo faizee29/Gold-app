@@ -1,32 +1,54 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import spl1 from '../assets/spl1.png';
 import spl2 from '../assets/spl2.png';
 
-export default function SplashScreen() {
-  const navigate = useNavigate();
+export default function SplashScreen({ onFinish, imagesToPreload = [] }) {
   const [showSpl2, setShowSpl2] = useState(false);
   const [slideUp, setSlideUp] = useState(false);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
 
+  // Preload images before starting splash animation
   useEffect(() => {
-    // After 1.2s, switch to spl2 and scale up
+    if (!imagesToPreload.length) {
+      setImagesLoaded(true);
+      return;
+    }
+    let isMounted = true;
+    const imagePromises = imagesToPreload.map((src) => {
+      return new Promise((resolve, reject) => {
+        const img = new window.Image();
+        img.onload = resolve;
+        img.onerror = reject;
+        img.src = src;
+      });
+    });
+    Promise.all(imagePromises)
+      .then(() => { if (isMounted) setImagesLoaded(true); })
+      .catch(() => { if (isMounted) setImagesLoaded(true); });
+    return () => { isMounted = false; };
+  }, [imagesToPreload]);
+
+  // Splash animation sequence (only after images loaded)
+  useEffect(() => {
+    if (!imagesLoaded) return;
     const toSpl2 = setTimeout(() => setShowSpl2(true), 1200);
-    // After 2.2s, start slide up
     const toSlideUp = setTimeout(() => setSlideUp(true), 3000);
     return () => {
       clearTimeout(toSpl2);
       clearTimeout(toSlideUp);
     };
-  }, [navigate]);
+  }, [imagesLoaded]);
 
-  // Navigate after slide up animation
+  // Call onFinish after slide up animation
   useEffect(() => {
     if (slideUp) {
-      const toHome = setTimeout(() => navigate('/home'), 100); // match slide-up duration
+      const toHome = setTimeout(() => {
+        if (onFinish) onFinish();
+      }, 700); // match slide-up duration
       return () => clearTimeout(toHome);
     }
-  }, [slideUp, navigate]);
+  }, [slideUp, onFinish]);
 
   return (
     <div style={{

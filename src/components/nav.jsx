@@ -58,18 +58,18 @@ function ResponsiveAppBar() {
             ))}
           </Box>
           {/* Center logo and brand */}
-          <Box sx={{ flex: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', mx: { xs: 1, md: 4 }, mt: { xs: 3, md: 4 } }}>
-            <img src={headerlogo} alt="Logo" style={{ height: 'clamp(70px, 12vw, 120px)', width: 'auto', marginBottom: 0 }} />
+          <Box sx={{ flex: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', mx: { xs: 1, md: 4 }, mt: { xs: 3, md: 9 } }}>
+            <img src={headerlogo} alt="Logo" style={{ height: 'clamp(70px, 12vw, 110px)', width: 'auto', marginBottom: 0 }} />
             <Box sx={{
                 boxShadow:'none',
                 backdropFilter: 'blur(10px)',
-              background: 'rgba(0,0,0,0.2)',
-              borderRadius: 2,
-              px: 5,
-              py: 0.5,
-              mt: 0.5,
-              display: 'inline-block',
-              clipPath: 'ellipse(180% 180% at 40% 0%)',
+                background: 'rgba(0,0,0,0.1)',
+                // borderRadius: 2,
+                px: 5,
+                py: 2, // increased vertical padding
+                mt: 0.5,
+                display: 'inline-block',
+                clipPath: 'polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%)', // flipped trapezoid
             }}>
               <Typography
                 sx={{
@@ -80,7 +80,7 @@ function ResponsiveAppBar() {
                   letterSpacing: '0.01em',
                   textAlign: 'center',
                   lineHeight: 1.1,
-                  textShadow: '0 2px 12px #0008',
+                  // textShadow: '0 2px 12px #0008',
                   whiteSpace: 'nowrap',
                 }}
               >

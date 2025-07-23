@@ -24,7 +24,7 @@ const blogs = [
 
 export default function Blogs() {
   return (
-    <Box sx={{ width: "100%", px: { xs: 2, md: 6 }, py: { xs: 4, md: 8 }, bgcolor: "#fff", ml: { xs: '-1em', md: '-2em' } }}>
+    <Box sx={{ width: "100%", maxWidth: "100vw", px: { xs: 2, md: 6 }, py: { xs: 4, md: 8 }, bgcolor: "#fff" }}>
       {/* Heading */}
       <Box sx={{ textAlign: "center", mb: { xs: 2, md: 4 } }}>
         <Typography
@@ -35,7 +35,6 @@ export default function Blogs() {
             lineHeight: 1.1,
             color: 'black',
             display: "block",
-            ml: { xs: "-0.5em", sm: "-1.5em", md: "-2.5em" },
           }}
         >
           From Brazilian Roots
@@ -48,7 +47,6 @@ export default function Blogs() {
             lineHeight: 1.1,
             color: 'black',
             display: "block",
-            ml: { xs: "0.5em", sm: "1.5em", md: "3.8em" }
           }}
         >
           to Modern Elegance
@@ -68,7 +66,7 @@ export default function Blogs() {
         }}
       >
         {/* First Card */}
-        <Box sx={{ display: "flex", flexDirection: { xs: 'column-reverse', md: 'column' }, alignItems: "flex-start", width: { xs: '100%', md: '96%' }, maxWidth: 400, mr: { xs: -2, md: -16 } }}>
+        <Box sx={{ display: "flex", flexDirection: { xs: 'column-reverse', md: 'column' }, alignItems: "flex-start", width: { xs: '100%', md: '96%' }, maxWidth: 400 }}>
           <Typography
             sx={{
               fontFamily: 'BaketFashion-DemoVersion-Regular, serif',
@@ -80,7 +78,6 @@ export default function Blogs() {
               width: "100%",
               color:'black',
               lineHeight: 1.05,
-              mr: { xs: -2, md: -2 },
             }}
           >
             {blogs[0].title}
@@ -95,7 +92,6 @@ export default function Blogs() {
               textAlign: "left",
               width: "100%",
               textDecorationColor: 'black',
-              mr: { xs: -2, md: 8 },
             }}
           >
             Read More
@@ -108,7 +104,6 @@ export default function Blogs() {
               overflow: "hidden",
               borderRadius: 0,
               mt: { xs: 2, md: 4 },
-              mr: { xs: -4, md: -8 },
             }}
           >
             <Box

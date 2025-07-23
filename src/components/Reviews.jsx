@@ -82,8 +82,9 @@ export default function Reviews() {
   return (
     <Box
       sx={{
-        width: "100vw",
-        overflowX: "hidden",
+        width: "100%",
+        maxWidth: "100vw",
+        overflow: "hidden",
         minHeight: { xs: 500, md: 600, lg: 900 },
         height: { xs: "auto", md: 600, lg: 900 },
         backgroundImage: `url(${bg4th})`,
@@ -117,7 +118,7 @@ export default function Reviews() {
               fontFamily: 'BaketFashion-DemoVersion-Regular, serif',
               lineHeight: 1.1,
               letterSpacing: '0.01em',
-              textShadow: '0 2px 12px #0008',
+              // textShadow: '0 2px 12px #0008',
             }}
           >
             Customer
@@ -134,7 +135,7 @@ export default function Reviews() {
               mb: { xs: 2, md: 4 },
               lineHeight: 1.1,
               letterSpacing: '0.01em',
-              textShadow: '0 2px 12px #0008',
+              // textShadow: '0 2px 12px #0008',
               ml: { xs: '52px', md: '224px' },
               whiteSpace: 'nowrap',
             }}
@@ -146,7 +147,7 @@ export default function Reviews() {
       </Box>
       {/* Animated Review Box (left-aligned, left arrow outside, right arrow by ring image) */}
       {/* Left Arrow Button: left side of the review box, visually attached */}
-      <Box sx={{ position: 'absolute', left: { xs: 0, md: 24 }, top: '65%', transform: 'translateY(-50%)', zIndex: 6, display: { xs: 'none', sm: 'flex' }, alignItems: 'center', pointerEvents: 'auto' }}>
+      <Box sx={{ position: 'absolute', left: { xs: 0, md: 24 }, top: '65%', transform: 'translateY(-50%)', zIndex: 6, display: { xs: 'none', sm: 'flex' }, alignItems: 'center', pointerEvents: 'auto', maxWidth: 110 }}>
         <IconButton
           onClick={() => paginate(-1)}
           sx={{
@@ -180,7 +181,7 @@ export default function Reviews() {
         </IconButton>
       </Box>
       {/* Review Box: shifted right to make space for left arrow */}
-      <Box sx={{ position: 'absolute', left: { xs: 100, sm: 140, md: 180 }, top: '60%', transform: 'translateY(-50%)', zIndex: 5, display: 'flex', justifyContent: 'flex-start', pointerEvents: 'none', width: 'auto' }}>
+      <Box sx={{ position: 'absolute', left: { xs: 100, sm: 140, md: 180 }, top: '60%', transform: 'translateY(-50%)', zIndex: 5, display: 'flex', justifyContent: 'flex-start', pointerEvents: 'none', width: { xs: 'calc(100vw - 200px)', sm: 'auto' }, maxWidth: '100vw' }}>
         <Box sx={{ width: { xs: '100%', sm: 540, md: 700, lg: 620 }, maxWidth: '90vw', pointerEvents: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
           <AnimatePresence custom={direction} initial={false} mode="wait">
             <motion.div
@@ -253,7 +254,7 @@ export default function Reviews() {
         </Box>
       </Box>
       {/* Right Arrow Button: left side of the ring image, vertically centered */}
-      <Box sx={{ position: 'absolute', right: { xs: 100, sm: 140, md: 180 }, top: '65%', transform: 'translateY(-50%)', zIndex: 6, display: { xs: 'none', sm: 'flex' }, alignItems: 'center', pointerEvents: 'auto' }}>
+      <Box sx={{ position: 'absolute', right: { xs: 100, sm: 140, md: 180 }, top: '65%', transform: 'translateY(-50%)', zIndex: 6, display: { xs: 'none', sm: 'flex' }, alignItems: 'center', pointerEvents: 'auto', maxWidth: 110 }}>
         <IconButton
           onClick={() => paginate(1)}
           sx={{

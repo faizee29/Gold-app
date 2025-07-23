@@ -1,5 +1,5 @@
 #root {
-  width: 100%;
+  /* width: 100%; */
   margin: 0;
   padding: 0;
   text-align: center;
@@ -46,4 +46,16 @@
   src: url('./assets/fonts/BaketFashion-DemoVersion-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+}
+@font-face {
+  font-family: 'Century-Gothic';
+  src: url('./assets/fonts/Century-Gothic.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.swiper {
+  box-sizing: border-box !important;
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
 }

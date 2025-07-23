@@ -10,7 +10,7 @@ export default function AboutSection({ isBrownBgActive }) {
     return (
         <Box
             sx={{
-                width: "100%",
+                maxWidth: "100vw",
                 minHeight: "100vh",
                 backgroundColor: isBrownBgActive ? "#D2B49C" : "#f5f3f0",
                 transition: "background 0.4s",
@@ -109,7 +109,7 @@ export default function AboutSection({ isBrownBgActive }) {
                             color: "#23322d",
                             lineHeight: 1.13,
                             fontFamily: 'BaketFashion-DemoVersion-Regular, serif',
-                            textShadow: "0 2px 8px #fff8",
+                            // textShadow: "0 2px 8px #fff8",
                             textAlign: 'left',
                         }}
                     >
@@ -124,7 +124,8 @@ export default function AboutSection({ isBrownBgActive }) {
                 <Box
                     sx={{
                         position: "relative",
-                        width: { xs: "100vw", md: "80vw" },
+                        width: { xs: "100%", md: "80%" },
+                        maxWidth: "100vw",
                         height: { xs: 400, sm: 520, md: 650 },
                         display: "flex",
                         alignItems: "center",

@@ -12,7 +12,6 @@ export default function Signature() {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       sx={{
-        width: "100%",
         minHeight: { xs: 300, sm: 400, md: 400 },
         backgroundImage: `url(${hovered ? bg6 : bg5})`,
         backgroundSize: "cover",
@@ -69,9 +68,9 @@ export default function Signature() {
             mb: 2,
             textAlign: "center",
             fontFamily: 'BaketFashion-DemoVersion-Regular, serif',
-            fontSize: { xs: "2.5rem", sm: "3.5rem", md: "6rem" },
-            lineHeight: 1.1,
-            whiteSpace: "nowrap",
+            fontSize: { xs: "2rem", sm: "3rem", md: "4.5rem", lg: "6rem" },
+            lineHeight: { xs: 1.2, md: 1.1 },
+            px: { xs: 2, sm: 3 }
           }}
         >
           Create Your Signature Look
@@ -82,11 +81,11 @@ export default function Signature() {
             fontWeight: 'normal',
             textAlign: "center",
             fontFamily: 'BaketFashion-DemoVersion-Regular, serif',
-            fontSize: { xs: "2.5rem", sm: "3.5rem", md: "6rem" },
-            lineHeight: 1.1,
-            whiteSpace: "nowrap",
-            letterSpacing: 1,
+            fontSize: { xs: "2rem", sm: "3rem", md: "4.5rem", lg: "6rem" },
+            lineHeight: { xs: 1.2, md: 1.1 },
+            letterSpacing: { xs: 0.5, md: 1 },
             mb: 0,
+            px: { xs: 2, sm: 3 }
           }}
         >
           Explore Our Collection
