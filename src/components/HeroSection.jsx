@@ -281,7 +281,7 @@ export default function HeroSection({ bgImage, setBgImage, imagesLoaded, isBrown
           fontFamily: 'BaketFashion-DemoVersion-Regular, serif',
           // textShadow: "2px 2px 4px rgba(0,0,0,0.8)",
           zIndex: 10,
-          fontSize: { xs: "2.3rem", sm: "3.5rem", md: "5.2rem", lg: "9rem", xl: "12rem" },
+          fontSize: { xs: "2.3rem", sm: "3.5rem", md: "5.2rem", lg: "8.5rem", xl: "11.5rem" },
           whiteSpace: { xs: "normal", md: "nowrap" },
           px: { xs: 1, sm: 3, md: 4 },
         }}

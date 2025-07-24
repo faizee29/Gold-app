@@ -112,7 +112,7 @@ export default function CollectionSection({ isCollectionHovered, setIsCollection
       ref={sectionRef}
       sx={{
         width: "100%",
-        maxWidth: "100vw",
+        maxWidth: "100dvw",
         minHeight: { xs: "100vh", md: "1250px" },
         background: isBrownBgActive ? "#D2B49C" : `url(${secondarybg})`,
         backgroundSize: isBrownBgActive ? "auto" : "cover",
@@ -150,7 +150,7 @@ export default function CollectionSection({ isCollectionHovered, setIsCollection
           left: 0,
           right: 0,
           width: '100%',
-          maxWidth: '100vw',
+          maxWidth: '100dvw',
           height: { xs: 120, md: 180 },
           zIndex: 1,
           display: 'flex',

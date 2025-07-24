@@ -9,7 +9,7 @@ export default function Marquee({ marqueeContainerRef, marqueeTextRef, marqueeDi
         backgroundColor: isBrownBgActive ? "#D2B49C" : "#f5f3f0",
         transition: "background 0.4s",
         left: 0,
-        maxWidth: "100vw",
+        maxWidth: "100dvw",
         overflow: "hidden",
         zIndex: 1,
         height: { xs: "2.5rem", sm: "3.5rem", md: "5rem" },

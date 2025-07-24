@@ -83,7 +83,7 @@ export default function Reviews() {
     <Box
       sx={{
         width: "100%",
-        maxWidth: "100vw",
+        maxWidth: "100dvw",
         overflow: "hidden",
         minHeight: { xs: 500, md: 600, lg: 900 },
         height: { xs: "auto", md: 600, lg: 900 },
@@ -181,7 +181,7 @@ export default function Reviews() {
         </IconButton>
       </Box>
       {/* Review Box: shifted right to make space for left arrow */}
-      <Box sx={{ position: 'absolute', left: { xs: 100, sm: 140, md: 180 }, top: '60%', transform: 'translateY(-50%)', zIndex: 5, display: 'flex', justifyContent: 'flex-start', pointerEvents: 'none', width: { xs: 'calc(100vw - 200px)', sm: 'auto' }, maxWidth: '100vw' }}>
+      <Box sx={{ position: 'absolute', left: { xs: 100, sm: 140, md: 180 }, top: '60%', transform: 'translateY(-50%)', zIndex: 5, display: 'flex', justifyContent: 'flex-start', pointerEvents: 'none', width: { xs: 'calc(100dvw - 200px)', sm: 'auto' }, maxWidth: '100dvw' }}>
         <Box sx={{ width: { xs: '100%', sm: 540, md: 700, lg: 620 }, maxWidth: '90vw', pointerEvents: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
           <AnimatePresence custom={direction} initial={false} mode="wait">
             <motion.div

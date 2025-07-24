@@ -24,7 +24,7 @@ const blogs = [
 
 export default function Blogs() {
   return (
-    <Box sx={{ width: "100%", maxWidth: "100vw", px: { xs: 2, md: 6 }, py: { xs: 4, md: 8 }, bgcolor: "#fff" }}>
+    <Box sx={{maxWidth: "100dvw", px: { xs: 2, md: 6 }, py: { xs: 4, md: 8 }, bgcolor: "#fff" }}>
       {/* Heading */}
       <Box sx={{ textAlign: "center", mb: { xs: 2, md: 4 } }}>
         <Typography

@@ -10,7 +10,7 @@ export default function AboutSection({ isBrownBgActive }) {
     return (
         <Box
             sx={{
-                maxWidth: "100vw",
+                maxWidth: "100dvw",
                 minHeight: "100vh",
                 backgroundColor: isBrownBgActive ? "#D2B49C" : "#f5f3f0",
                 transition: "background 0.4s",
@@ -125,7 +125,7 @@ export default function AboutSection({ isBrownBgActive }) {
                     sx={{
                         position: "relative",
                         width: { xs: "100%", md: "80%" },
-                        maxWidth: "100vw",
+                        maxWidth: "100dvw",
                         height: { xs: 400, sm: 520, md: 650 },
                         display: "flex",
                         alignItems: "center",

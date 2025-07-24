@@ -11,7 +11,7 @@ export default function JewelryShowcase({ jewelryItems, hoveredCard, setHoveredC
     <Box
       sx={{
         width: "100%",
-        maxWidth: "100vw",
+        maxWidth: "100dvw",
         overflow: "hidden",
         position: "relative",
         py: 0,
@@ -36,7 +36,7 @@ export default function JewelryShowcase({ jewelryItems, hoveredCard, setHoveredC
           loop={true}
           style={{
             width: "100%",
-            maxWidth: "100vw",
+            maxWidth: "100dvw",
             height: "auto",
             overflow: "visible",
           }}

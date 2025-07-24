@@ -32,9 +32,62 @@ function ResponsiveAppBar() {
   return (
     <AppBar position="absolute" sx={{ background: 'rgba(0,0,0,0.2)', backdropFilter: 'blur(10px)', boxShadow: 'none', height: { xs: 80, md: 120 }, justifyContent: 'center' }}>
       <Container maxWidth="xl" disableGutters>
-        <Toolbar disableGutters sx={{ minHeight: { xs: 80, md: 120 }, px: { xs: 1, md: 4 }, width: '100%' }}>
-          {/* Left menu items */}
-          <Box sx={{ flex: 1, display: { xs: 'none', md: 'flex' }, alignItems: 'center', justifyContent: 'flex-end', gap: { xs: 2, md: 4, lg: 6 } }}>
+        <Toolbar disableGutters sx={{ justifyContent: 'space-between', minHeight: { xs: 80, md: 120 }, px: { xs: 1, md: 4 } }}>
+          {/* Hamburger menu for small screens */}
+          <Box sx={{ display: { xs: 'flex', md: 'none' }, alignItems: 'center', flex: 1 }}>
+            <IconButton
+              size="large"
+              aria-label="open navigation menu"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              sx={{ color: 'white', mr: 1 }}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorElNav}
+              anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+              keepMounted
+              transformOrigin={{ vertical: 'top', horizontal: 'left' }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{ display: { xs: 'block', md: 'none' } }}
+            >
+              {pages.map((page) => (
+                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center" sx={{ fontFamily: 'BaketFashion-DemoVersion-Regular, serif', color: '#D2B49C' }}>
+                    {page.split(' ').map(word => word.charAt(0) + word.slice(1).toLowerCase()).join(' ')}
+                  </Typography>
+                </MenuItem>
+              ))}
+            </Menu>
+            {/* Center logo for mobile */}
+            <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <img src={headerlogo} alt="Logo" style={{ height: 'clamp(40px, 10vw, 60px)', width: 'auto' }} />
+            </Box>
+            {/* Right icons for mobile */}
+            <Box sx={{ display: 'flex', gap: 0.5, alignItems: 'center', ml: 1 }}>
+              <Tooltip title="Search">
+                <IconButton sx={{ color: 'white', p: 0.5 }}>
+                  <SearchIcon />
+                </IconButton>
+              </Tooltip>
+              <Tooltip title="Cart">
+                <IconButton sx={{ color: 'white', p: 0.5 }}>
+                  <ShoppingCartIcon />
+                </IconButton>
+              </Tooltip>
+              <Tooltip title="Profile">
+                <IconButton sx={{ color: 'white', p: 0.5 }}>
+                  <PersonIcon />
+                </IconButton>
+              </Tooltip>
+            </Box>
+          </Box>
+          {/* Left menu items (md and up) */}
+          <Box sx={{minWidth: 0, overflow: 'hidden', display: { xs: 'none', md: 'flex' }, alignItems: 'center', justifyContent: 'flex-end', gap: { xs: 0.5, md: 1.2, lg: 1.8 } }}>
             {[0,1,2,3].map((i) => (
               <Button
                 key={pages[i]}
@@ -45,7 +98,7 @@ function ResponsiveAppBar() {
                   fontSize: { xs: '1rem', sm: '1.1rem', md: '1.3rem', lg: '1.5rem' },
                   fontWeight: 'normal',
                   letterSpacing: '0.01em',
-                  px: { xs: 1, md: 2 },
+                  px: { xs: 0.7, md: 1.2 },
                   textTransform: 'none',
                   background: 'none',
                   boxShadow: 'none',
@@ -57,30 +110,28 @@ function ResponsiveAppBar() {
               </Button>
             ))}
           </Box>
-          {/* Center logo and brand */}
-          <Box sx={{ flex: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', mx: { xs: 1, md: 4 }, mt: { xs: 3, md: 9 } }}>
-            <img src={headerlogo} alt="Logo" style={{ height: 'clamp(70px, 12vw, 110px)', width: 'auto', marginBottom: 0 }} />
+          {/* Center logo and brand (md and up only) */}
+          <Box sx={{display: { xs: 'none', md: 'flex' }, flexDirection: 'column', alignItems: 'center', justifyContent: 'center', mt: { md: 9 } }}>
+            <img src={headerlogo} alt="Logo" style={{ height: 'clamp(60px, 10vw, 90px)', width: 'auto', marginBottom: 0 }} />
             <Box sx={{
                 boxShadow:'none',
                 backdropFilter: 'blur(10px)',
                 background: 'rgba(0,0,0,0.1)',
-                // borderRadius: 2,
-                px: 5,
-                py: 2, // increased vertical padding
-                mt: 0.5,
+                px: 3.5,
+                py: 1.2,
+                mt: 0.3,
                 display: 'inline-block',
-                clipPath: 'polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%)', // flipped trapezoid
+                clipPath: 'polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%)',
             }}>
               <Typography
                 sx={{
                   fontFamily: 'BaketFashion-DemoVersion-Regular, serif',
-                  fontSize: { xs: '1rem', sm: '1.3rem', md: '2.2rem', lg: '2.0rem' },
+                  fontSize: { xs: '0.95rem', sm: '1.1rem', md: '1.7rem', lg: '1.7rem' },
                   color: '#D2B49C',
                   fontWeight: 'normal',
                   letterSpacing: '0.01em',
                   textAlign: 'center',
                   lineHeight: 1.1,
-                  // textShadow: '0 2px 12px #0008',
                   whiteSpace: 'nowrap',
                 }}
               >
@@ -88,8 +139,8 @@ function ResponsiveAppBar() {
               </Typography>
             </Box>
           </Box>
-          {/* Right menu items */}
-          <Box sx={{ flex: 1, display: { xs: 'none', md: 'flex' }, alignItems: 'center', justifyContent: 'flex-start', gap: { xs: 2, md: 4, lg: 6 } }}>
+          {/* Right menu items (md and up only) */}
+          <Box sx={{minWidth: 0, overflow: 'hidden', display: { xs: 'none', md: 'flex' }, alignItems: 'center', justifyContent: 'flex-start', gap: { xs: 0.5, md: 1.2, lg: 1.8 } }}>
             {[4,5].map((i) => (
               <Button
                 key={pages[i]}
@@ -100,7 +151,7 @@ function ResponsiveAppBar() {
                   fontSize: { xs: '1rem', sm: '1.1rem', md: '1.3rem', lg: '1.5rem' },
                   fontWeight: 'normal',
                   letterSpacing: '0.01em',
-                  px: { xs: 1, md: 2 },
+                  px: { xs: 0.7, md: 1.2 },
                   textTransform: 'none',
                   background: 'none',
                   boxShadow: 'none',
@@ -112,20 +163,20 @@ function ResponsiveAppBar() {
               </Button>
             ))}
           </Box>
-          {/* Right icons */}
-          <Box sx={{ flex: 0, display: 'flex', gap: 2, alignItems: 'center', ml: { xs: 1, md: 4 } }}>
+          {/* Right icons (md and up only) */}
+          <Box sx={{minWidth: 0, overflow: 'hidden', display: { xs: 'none', md: 'flex' }, gap: 1, alignItems: 'center', ml: { xs: 0.5, md: 2 } }}>
             <Tooltip title="Search">
-              <IconButton sx={{ color: 'white' }}>
+              <IconButton sx={{ color: 'white', p: { xs: 0.5, md: 1 } }}>
                 <SearchIcon />
               </IconButton>
             </Tooltip>
             <Tooltip title="Cart">
-              <IconButton sx={{ color: 'white' }}>
+              <IconButton sx={{ color: 'white', p: { xs: 0.5, md: 1 } }}>
                 <ShoppingCartIcon />
               </IconButton>
             </Tooltip>
             <Tooltip title="Profile">
-              <IconButton sx={{ color: 'white' }}>
+              <IconButton sx={{ color: 'white', p: { xs: 0.5, md: 1 } }}>
                 <PersonIcon />
               </IconButton>
             </Tooltip>

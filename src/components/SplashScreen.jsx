@@ -52,7 +52,7 @@ export default function SplashScreen({ onFinish, imagesToPreload = [] }) {
 
   return (
     <div style={{
-      width: '100vw',
+      width: '100dvw',
       height: '100vh',
       background: '#111',
       display: 'flex',
@@ -73,7 +73,7 @@ export default function SplashScreen({ onFinish, imagesToPreload = [] }) {
             initial={{ scale: 1, opacity: 1 }}
             animate={{ scale: 1.1, opacity: 1 }}
             exit={{ scale: 1.3, opacity: 0, transition: { duration: 0.6 } }}
-            style={{ width: '100vw', height: '100vh', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }}
+            style={{ width: '100dvw', height: '100vh', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }}
           />
         )}
         {showSpl2 && !slideUp && (
@@ -83,7 +83,7 @@ export default function SplashScreen({ onFinish, imagesToPreload = [] }) {
             alt="Splash 2"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1.2, opacity: 1, y: 0 }}
-            style={{ width: '100vw', height: '100vh', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }}
+            style={{ width: '100dvw', height: '100vh', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }}
             transition={{ duration: 0.7 }}
           />
         )}
@@ -95,7 +95,7 @@ export default function SplashScreen({ onFinish, imagesToPreload = [] }) {
             initial={{ scale: 1.2, opacity: 1, y: 0 }}
             animate={{ y: -window.innerHeight, opacity: 0 }}
             transition={{ duration: 0.7, ease: 'easeInOut' }}
-            style={{ width: '100vw', height: '100vh', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }}
+            style={{ width: '100dvw', height: '100vh', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }}
           />
         )}
       </AnimatePresence>
