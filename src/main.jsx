@@ -9,6 +9,16 @@ const theme = createTheme({
   typography: {
     fontFamily: 'Century-Gothic, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif',
   },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 900,
+      lg: 1200,
+      xl: 1450,
+      xxl: 1580, // custom breakpoint for large screens
+    },
+  },
 });
 
 ReactDOM.createRoot(document.getElementById('root')).render(

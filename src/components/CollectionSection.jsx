@@ -14,8 +14,8 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function CollectionSection({ isCollectionHovered, setIsCollectionHovered, isBrownBgActive }) {
   // Responsive image sizes for cards
-  const cardImgWidth = { xs: 220, sm: 320, md: 500, lg: 700 };
-  const cardImgHeight = { xs: 220, sm: 320, md: 500, lg: 700 };
+  const cardImgWidth = { xs: 120, sm: 180, md: 320, lg: 420, xl: 520, xxl: 700 };
+  const cardImgHeight = { xs: 120, sm: 180, md: 320, lg: 420, xl: 520, xxl: 700 };
   // Zoom-in effect for card images (applied to container)
   const cardImgZoomBoxSx = {
     position: 'relative',
@@ -165,7 +165,7 @@ export default function CollectionSection({ isCollectionHovered, setIsCollection
           <Typography
             ref={leftHeadingRef}
             sx={{
-              fontSize: { xs: '2rem', sm: '3rem', md: '8rem', lg: '10rem' },
+              fontSize: { xs: '1.5rem', sm: '2.2rem', md: '4rem', lg: '6rem', xl: '8rem', xxl: '10rem' },
               fontFamily: 'BaketFashion-DemoVersion-Regular, serif',
               fontWeight: 'normal',
               color: 'black',
@@ -185,7 +185,7 @@ export default function CollectionSection({ isCollectionHovered, setIsCollection
           <Typography
             ref={rightHeadingRef}
             sx={{
-              fontSize: { xs: '2rem', sm: '3rem', md: '8rem', lg: '10rem' },
+              fontSize: { xs: '1.5rem', sm: '2.2rem', md: '4rem', lg: '6rem', xl: '8rem', xxl: '10rem' },
               fontFamily: 'BaketFashion-DemoVersion-Regular, serif',
               fontWeight: 'normal',
               color: 'black',
@@ -279,7 +279,7 @@ export default function CollectionSection({ isCollectionHovered, setIsCollection
           <Typography
             sx={{
               mt: 2,
-              fontSize: { xs: '2rem', md: '5rem' },
+              fontSize: { xs: '1.2rem', sm: '2rem', md: '3.5rem', lg: '4.5rem', xl: '5rem', xxl: '6rem' },
               fontFamily: 'BaketFashion-DemoVersion-Regular, serif',
               color: '#111',
               textAlign: 'center',
@@ -323,7 +323,7 @@ export default function CollectionSection({ isCollectionHovered, setIsCollection
           <Typography
             sx={{
               mt: 2,
-              fontSize: { xs: '2rem', md: '5rem' },
+              fontSize: { xs: '1.2rem', sm: '2rem', md: '3.5rem', lg: '4.5rem', xl: '5rem', xxl: '6rem' },
               fontFamily: 'BaketFashion-DemoVersion-Regular, serif',
               color: '#111',
               textAlign: 'center',
@@ -368,7 +368,7 @@ export default function CollectionSection({ isCollectionHovered, setIsCollection
             sx={{
                 paddingBottom:'40px',
               mt: 8,
-              fontSize: { xs: '2rem', md: '5rem' },
+              fontSize: { xs: '1.2rem', sm: '2rem', md: '3.5rem', lg: '4.5rem', xl: '5rem', xxl: '6rem' },
               fontFamily: 'BaketFashion-DemoVersion-Regular, serif',
               color: '#111',
               textAlign: 'center',

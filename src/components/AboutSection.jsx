@@ -21,7 +21,7 @@ export default function AboutSection({ isBrownBgActive }) {
                 justifyContent: "center",
                 overflowX: "hidden",
                 py: { xs: 4, md: 8 },
-                px: { xs: 2, sm: 4, md: 6, lg: 8 },
+                px: { xs: 2, sm: 4, md: 6, lg: 8, xxl: 10 },
             }}
         >
             {/* Decorative Vector Image Background */}
@@ -33,12 +33,10 @@ export default function AboutSection({ isBrownBgActive }) {
                     position: "absolute",
                     left: { xs: '2%', md: '5%' },
                     bottom: 0,
-                    width: { xs: '100%', md: '90%' },
+                    width: { xs: '100%', md: '90%', xxl: '80%' },
                     objectFit: 'contain',
                     pointerEvents: "none",
                     userSelect: "none",
-                    // opacity: 0.18,
-                    // zIndex: 1,
                 }}
             />
 
@@ -57,15 +55,15 @@ export default function AboutSection({ isBrownBgActive }) {
                     src={star}
                     alt="Star"
                     sx={{
-                        width: { xs: "25px", md: "35px" },
-                        height: { xs: "25px", md: "35px" },
+                        width: { xs: "20px", md: "28px", xl: "32px", xxl: "35px" },
+                        height: { xs: "20px", md: "28px", xl: "32px", xxl: "35px" },
                         mb: 1,
                         objectFit: "contain",
                     }}
                 />
                 <Typography
                     sx={{
-                        fontSize: { xs: "0.7rem", sm: "0.8rem", md: "1.4rem" },
+                        fontSize: { xs: "0.7rem", sm: "0.8rem", md: "1.1rem", xl: "1.2rem", xxl: "1.4rem" },
                         fontWeight: 'normal',
                         letterSpacing: "2px",
                         color: "#333",
@@ -81,8 +79,8 @@ export default function AboutSection({ isBrownBgActive }) {
             <Box
                 sx={{
                     width: "100%",
-                    maxWidth: "1600px",
-                    minHeight: { xs: 400,  sm: 600, md: 800 },
+                    maxWidth: { xs: "98vw", md: "1200px", xl: "1400px", xxl: "1600px" },
+                    minHeight: { xs: 320, sm: 400, md: 600, xl: 700, xxl: 800 },
                     position: "relative",
                     display: "flex",
                     alignItems: "flex-start",
@@ -95,21 +93,20 @@ export default function AboutSection({ isBrownBgActive }) {
                 <Box
                     sx={{
                         position: "absolute",
-                        left: { xs: 10, md: 80 },
-                        top: { xs: 10, md: 40 },
-                        width: { xs: "60vw", md: "32vw" },
+                        left: { xs: 6, md: 40, xl: 60, xxl: 80 },
+                        top: { xs: 6, md: 20, xl: 30, xxl: 40 },
+                        width: { xs: "60vw", md: "32vw", xl: "30vw", xxl: "28vw" },
                         zIndex: 4,
                         pointerEvents: "none",
                     }}
                 >
                     <Typography
                         sx={{
-                            fontSize: { xs: "2.3rem", sm: "3rem", md: "3.7rem", lg: "5.8rem" },
+                            fontSize: { xs: "1.3rem", sm: "1.7rem", md: "2.2rem", xl: "3rem", xxl: "3.7rem", xxxl: "5.8rem" },
                             fontWeight: 'normal',
                             color: "#23322d",
                             lineHeight: 1.13,
                             fontFamily: 'BaketFashion-DemoVersion-Regular, serif',
-                            // textShadow: "0 2px 8px #fff8",
                             textAlign: 'left',
                         }}
                     >
@@ -127,10 +124,10 @@ export default function AboutSection({ isBrownBgActive }) {
                         flexDirection: "row",
                         alignItems: "center",
                         justifyContent: "center",
-                        width: { xs: "100%", md: "95%" },
-                        maxWidth: "1800px",
-                        height: { xs: 440, sm: 700, md: 960 }, // match center image height
-                        gap: { xs: 2, sm: 4, md: 8 },
+                        width: { xs: "100%", md: "95%", xxl: "90%" },
+                        maxWidth: { xs: "98vw", md: "1200px", xl: "1400px", xxl: "1800px" },
+                        height: { xs: 220, sm: 320, md: 500, xl: 700, xxl: 960 },
+                        gap: { xs: 1, sm: 2, md: 4, xl: 6, xxl: 8 },
                         zIndex: 2,
                         mx: "auto",
                         position: "relative",
@@ -139,21 +136,21 @@ export default function AboutSection({ isBrownBgActive }) {
                     {/* Left image container - align image to bottom */}
                     <Box
                         sx={{
-                            width: { xs: 240, sm: 340, md: 480 },
-                            height: { xs: 440, sm: 700, md: 960 }, // match center image height
+                            width: { xs: 100, sm: 180, md: 260, xl: 340, xxl: 480 },
+                            height: { xs: 160, sm: 240, md: 330, xl: 450, xxl: 960 },
                             display: 'flex',
                             alignItems: 'flex-end',
                             justifyContent: 'center',
-                            pb: { xs: 0, sm: 1, md: 16 }, // reduced padding to move image up
-                            mr: { xs: -3, sm: -6, md: -10 }, // move even closer to center image
-                            pt: { xs: 0, sm: 0,  }, // no top padding to move image up
-                            mt: { xs: -3, sm: -6, md: -10 }, // even more negative margin to pull image up more
+                            pb: { xs: 0, sm: 1, md: 4, xl: 8, xxl: 16 },
+                            mr: { xs: -1, sm: -2, md: -4, xl: -6, xxl: -10 },
+                            pt: { xs: 0, sm: 0 },
+                            mt: { xs: -1, sm: -2, md: -4, xl: -6, xxl: -10 },
                         }}
                     >
                         <Box
                             sx={{
-                                width: { xs: 180, sm: 260, md: 340 },
-                                height: { xs: 240, sm: 330, md: 450 },
+                                width: { xs: 80, sm: 120, md: 180, xl: 260, xxl: 340 },
+                                height: { xs: 100, sm: 160, md: 240, xl: 330, xxl: 450 },
                                 overflow: "hidden",
                             }}
                         >
@@ -177,8 +174,8 @@ export default function AboutSection({ isBrownBgActive }) {
                     {/* Center main image */}
                     <Box
                         sx={{
-                            width: { xs: 520, sm: 720, md: 700 },
-                            height: { xs: 440, sm: 700, md: 900 },
+                            width: { xs: 180, sm: 320, md: 420, xl: 600, xxl: 700 },
+                            height: { xs: 160, sm: 240, md: 400, xl: 700, xxl: 900 },
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
@@ -211,20 +208,20 @@ export default function AboutSection({ isBrownBgActive }) {
                     {/* Right image container - align image to top */}
                     <Box
                         sx={{
-                            width: { xs: 240, sm: 340, md: 480 },
-                            height: { xs: 440, sm: 700, md: 960 }, // match center image height
+                            width: { xs: 100, sm: 180, md: 260, xl: 340, xxl: 480 },
+                            height: { xs: 160, sm: 240, md: 330, xl: 450, xxl: 960 },
                             display: 'flex',
                             alignItems: 'flex-start',
                             justifyContent: 'center',
-                            pt: { xs: 4, sm: 8, md: 40}, // push image further down
-                            pb: { xs: 1, sm: 2,  }, // add bottom padding to move image down
-                            ml: { xs: -2, sm: -4, md: -10 }, // move even closer to center image
+                            pt: { xs: 2, sm: 4, md: 8, xl: 20, xxl: 40 },
+                            pb: { xs: 1, sm: 2 },
+                            ml: { xs: -1, sm: -2, md: -4, xl: -6, xxl: -10 },
                         }}
                     >
                         <Box
                             sx={{
-                                width: { xs: 180, sm: 260, md: 340 },
-                                height: { xs: 240, sm: 330, md: 450 },
+                                width: { xs: 80, sm: 120, md: 180, xl: 260, xxl: 340 },
+                                height: { xs: 100, sm: 160, md: 240, xl: 330, xxl: 450 },
                                 overflow: "hidden",
                             }}
                         >
@@ -250,21 +247,18 @@ export default function AboutSection({ isBrownBgActive }) {
                 <Box
                     sx={{
                         position: "absolute",
-                        right: { xs: -40, md: -120 },
-                        bottom: { xs: 40, md: 66 },
-                        width: { xs: "90vw", md: "40vw" },
+                        right: { xs: -10, md: -40, xl: -80, xxl: -120 },
+                        bottom: { xs: 10, md: 30, xl: 50, xxl: 66 },
+                        width: { xs: "80vw", md: "50vw", xl: "45vw", xxl: "40vw" },
                         zIndex: 4,
                         pointerEvents: "none",
                     }}
                 >
                     <Typography
                         sx={{
-                            fontSize: { xs: "1.05rem", md: "1.8rem" },
+                            fontSize: { xs: "0.8rem", md: "1.1rem", xl: "1.4rem", xxl: "1.8rem" },
                             color: "#222",
-                            // lineHeight: 1.7,
-                            // fontStyle: "italic",
                             textAlign: { xs: "right", md: "left" },
-                            // textShadow: "0 2px 8px #fff8",
                         }}
                     >
                         Lorem Ipsum Dolor Sit Amet Consectetur Sus.<br />
@@ -281,15 +275,14 @@ export default function AboutSection({ isBrownBgActive }) {
                     sx={{
                         backgroundColor: "black",
                         color: "white",
-                        px: { xs: 5, md: 9 },
-                        py: { xs: 1.2, md: 1.5 },
-                        fontSize: { xs: "0.8rem", md: "1.2rem" },
+                        px: { xs: 3, md: 5, xl: 7, xxl: 9 },
+                        py: { xs: 0.8, md: 1.2, xl: 1.3, xxl: 1.5 },
+                        fontSize: { xs: "0.7rem", md: "1rem", xl: "1.1rem", xxl: "1.2rem" },
                         fontWeight: "400",
                         letterSpacing: "1px",
                         borderRadius: "0",
                         textTransform: "none",
                         fontFamily: 'BaketFashion-DemoVersion-Regular, serif',
-
                         boxShadow: 2,
                         "&:hover": {
                             backgroundColor: "#333",

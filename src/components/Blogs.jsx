@@ -30,7 +30,7 @@ export default function Blogs() {
         <Typography
           sx={{
             fontFamily: 'BaketFashion-DemoVersion-Regular, serif',
-            fontSize: { xs: "2.2rem", sm: "2.8rem", md: "5.8rem" },
+            fontSize: { xs: "1.3rem", sm: "1.7rem", md: "2.2rem", lg: "3.2rem", xl: "4.2rem", xxl: "5.8rem" },
             fontWeight: 'normal',
             lineHeight: 1.1,
             color: 'black',
@@ -42,7 +42,7 @@ export default function Blogs() {
         <Typography
           sx={{
             fontFamily: 'BaketFashion-DemoVersion-Regular, serif',
-            fontSize: { xs: "2.2rem", sm: "2.8rem", md: "5.8rem" },
+            fontSize: { xs: "1.3rem", sm: "1.7rem", md: "2.2rem", lg: "3.2rem", xl: "4.2rem", xxl: "5.8rem" },
             fontWeight: 'normal',
             lineHeight: 1.1,
             color: 'black',
@@ -70,7 +70,7 @@ export default function Blogs() {
           <Typography
             sx={{
               fontFamily: 'BaketFashion-DemoVersion-Regular, serif',
-              fontSize: { xs: "2.3rem", md: "3.4rem" },
+              fontSize: { xs: "1.1rem", sm: "1.5rem", md: "2.2rem", lg: "2.8rem", xl: "3.2rem", xxl: "3.4rem" },
               fontWeight: 'normal',
               mb: 1,
               mt: { xs: -2, md: -2 },
@@ -100,7 +100,7 @@ export default function Blogs() {
             sx={{
               width: "100%",
               maxWidth: 400,
-              height: { xs: 370, md: 480 },
+              height: { xs: 180, sm: 240, md: 320, lg: 400, xl: 440, xxl: 480 },
               overflow: "hidden",
               borderRadius: 0,
               mt: { xs: 2, md: 4 },
@@ -128,7 +128,7 @@ export default function Blogs() {
             sx={{
               width: "100%",
               maxWidth: 400,
-              height: { xs: 370, md: 480 },
+              height: { xs: 180, sm: 240, md: 320, lg: 400, xl: 440, xxl: 480 },
               overflow: "hidden",
               borderRadius: 0,
               mb: 2,
@@ -152,7 +152,7 @@ export default function Blogs() {
           <Typography
             sx={{
               fontFamily: 'BaketFashion-DemoVersion-Regular, serif',
-              fontSize: { xs: "2.3rem", md: "3.4rem" },
+              fontSize: { xs: "1.1rem", sm: "1.5rem", md: "2.2rem", lg: "2.8rem", xl: "3.2rem", xxl: "3.4rem" },
               fontWeight: 'normal',
               mb: 1,
               mt: { xs: 2, md: 4 },
@@ -184,7 +184,7 @@ export default function Blogs() {
           <Typography
             sx={{
               fontFamily: 'BaketFashion-DemoVersion-Regular, serif',
-              fontSize: { xs: "2.3rem", md: "3.4rem" },
+              fontSize: { xs: "1.1rem", sm: "1.5rem", md: "2.2rem", lg: "2.8rem", xl: "3.2rem", xxl: "3.4rem" },
               fontWeight: 'normal',
               mb: 1,
               mt: { xs: -2, md: -2 },
@@ -216,7 +216,7 @@ export default function Blogs() {
             sx={{
               width: "100%",
               maxWidth: 400,
-              height: { xs: 370, md: 480 },
+              height: { xs: 180, sm: 240, md: 320, lg: 400, xl: 440, xxl: 480 },
               overflow: "hidden",
               borderRadius: 0,
               mt: { xs: 2, md: 4 },
