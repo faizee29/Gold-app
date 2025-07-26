@@ -11,8 +11,6 @@ export default function JewelryShowcase({ jewelryItems, hoveredCard, setHoveredC
     <Box
       sx={{
         width: "100%",
-        maxWidth: "100dvw",
-        overflow: "hidden",
         position: "relative",
         py: 0,
         background: isBrownBgActive ? "#D2B49C" : "#fff",
@@ -21,7 +19,7 @@ export default function JewelryShowcase({ jewelryItems, hoveredCard, setHoveredC
     >
       <Box sx={{ width: "100%", height: "auto", position: "relative" }}>
         <Swiper
-
+          className="jewelry-swiper"
           key={jewelryItems.length}
           modules={[Navigation]}
           spaceBetween={0}
@@ -35,24 +33,20 @@ export default function JewelryShowcase({ jewelryItems, hoveredCard, setHoveredC
           // }}
           loop={true}
           style={{
-            width: "100%",
-            maxWidth: "100dvw",
             height: "auto",
             overflow: "visible",
           }}
           breakpoints={{
             320: { slidesPerView: 1 },
             640: { slidesPerView: 2 },
-            960: { slidesPerView: 2 },
-            1280: { slidesPerView: 3 }, // reduced from 3.5
+            960: { slidesPerView: 2. },
+            1280: { slidesPerView: 3.5 },
           }}
         >
           {jewelryItems.map((item, idx) => (
             <SwiperSlide
               key={idx}
               style={{
-                maxWidth: "400px",
-                width: "100%",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",

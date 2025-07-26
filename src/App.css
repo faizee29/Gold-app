@@ -65,4 +65,9 @@ body {
   box-sizing: border-box !important;
   max-width: 100dvw !important;
   overflow-x: hidden !important;
+  overflow-y: visible;
+}
+
+.jewelry-swiper {
+  overflow-y: visible !important;
 }

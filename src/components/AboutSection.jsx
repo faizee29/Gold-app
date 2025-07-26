@@ -95,7 +95,7 @@ export default function AboutSection({ isBrownBgActive }) {
                 <Box
                     sx={{
                         position: "absolute",
-                        left: { xs: 0, md: 60 },
+                        left: { xs: 10, md: 80 },
                         top: { xs: 10, md: 40 },
                         width: { xs: "60vw", md: "32vw" },
                         zIndex: 4,
@@ -104,7 +104,7 @@ export default function AboutSection({ isBrownBgActive }) {
                 >
                     <Typography
                         sx={{
-                            fontSize: { xs: "2.3rem", sm: "3rem", md: "3.7rem", lg: "5.6rem" },
+                            fontSize: { xs: "2.3rem", sm: "3rem", md: "3.7rem", lg: "5.8rem" },
                             fontWeight: 'normal',
                             color: "#23322d",
                             lineHeight: 1.13,
@@ -120,135 +120,158 @@ export default function AboutSection({ isBrownBgActive }) {
                         Your Style.
                     </Typography>
                 </Box>
-                {/* Images Group - Centered and Overlapping */}
+                {/* Images Group - Centered and Overlapping (now side by side) */}
                 <Box
                     sx={{
-                        position: "relative",
-                        width: { xs: "100%", md: "80%" },
-                        maxWidth: "100dvw",
-                        height: { xs: 400, sm: 520, md: 650 },
                         display: "flex",
+                        flexDirection: "row",
                         alignItems: "center",
                         justifyContent: "center",
+                        width: { xs: "100%", md: "95%" },
+                        maxWidth: "1800px",
+                        height: { xs: 440, sm: 700, md: 960 }, // match center image height
+                        gap: { xs: 2, sm: 4, md: 8 },
                         zIndex: 2,
                         mx: "auto",
+                        position: "relative",
                     }}
                 >
-                    {/* Left small image - further down below heading */}
+                    {/* Left image container - align image to bottom */}
                     <Box
                         sx={{
-                            position: "absolute",
-                            left: { xs: 0, md: 60 },
-                            top: { xs: 260, md: 360 },
-                            width: { xs: 200, sm: 270, md: 360 },
-                            height: { xs: 220, sm: 300, md: 400 },
-                            // borderRadius: "16px",
-                            boxShadow: 4,
-                            zIndex: 2,
-                            overflow: 'hidden',
+                            width: { xs: 240, sm: 340, md: 480 },
+                            height: { xs: 440, sm: 700, md: 960 }, // match center image height
+                            display: 'flex',
+                            alignItems: 'flex-end',
+                            justifyContent: 'center',
+                            pb: { xs: 0, sm: 1, md: 16 }, // reduced padding to move image up
+                            mr: { xs: -3, sm: -6, md: -10 }, // move even closer to center image
+                            pt: { xs: 0, sm: 0,  }, // no top padding to move image up
+                            mt: { xs: -3, sm: -6, md: -10 }, // even more negative margin to pull image up more
                         }}
                     >
                         <Box
-                            component="img"
-                            src={model1}
-                            alt="Model 1"
                             sx={{
-                              
-                                width: '100%',
-                                height: '100%',
-                                objectFit: "cover",
-                                transition: 'transform 0.5s cubic-bezier(0.4,0,0.2,1)',
-                                '&:hover': {
-                                    transform: 'scale(1.08)',
-                                },
-                                display: 'block',
+                                width: { xs: 180, sm: 260, md: 340 },
+                                height: { xs: 240, sm: 330, md: 450 },
+                                overflow: "hidden",
                             }}
-                        />
+                        >
+                            <Box
+                                component="img"
+                                src={model1}
+                                alt="Model 1"
+                                sx={{
+                                    width: '100%',
+                                    height: '100%',
+                                    objectFit: "cover",
+                                    transition: 'transform 0.5s cubic-bezier(0.4,0,0.2,1)',
+                                    '&:hover': {
+                                        transform: 'scale(1.08)',
+                                    },
+                                    display: 'block',
+                                }}
+                            />
+                        </Box>
                     </Box>
-                    {/* Center main image - much larger */}
+                    {/* Center main image */}
                     <Box
                         sx={{
-                            position: "absolute",
-                            left: "50%",
-                            top: { xs: 0, md: 0 },
-                            transform: "translateX(-50%)",
-                            width: { xs: 320, sm: 440, md: 600 },
-                            height: { xs: 420, sm: 600, md: 800 },
-                            // borderRadius: "24px",
-                            boxShadow: 8,
-                            zIndex: 3,
-                            overflow: 'hidden',
+                            width: { xs: 520, sm: 720, md: 700 },
+                            height: { xs: 440, sm: 700, md: 900 },
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
                         }}
                     >
                         <Box
-                            component="img"
-                            src={model2}
-                            alt="Model 2"
                             sx={{
                                 width: '100%',
                                 height: '100%',
-                                objectFit: "cover",
-                                transition: 'transform 0.5s cubic-bezier(0.4,0,0.2,1)',
-                                '&:hover': {
-                                    transform: 'scale(1.08)',
-                                },
-                                display: 'block',
+                                overflow: "hidden",
                             }}
-                        />
+                        >
+                            <Box
+                                component="img"
+                                src={model2}
+                                alt="Model 2"
+                                sx={{
+                                    width: '100%',
+                                    height: '100%',
+                                    objectFit: "cover",
+                                    transition: 'transform 0.5s cubic-bezier(0.4,0,0.2,1)',
+                                    '&:hover': {
+                                        transform: 'scale(1.08)',
+                                    },
+                                    display: 'block',
+                                }}
+                            />
+                        </Box>
                     </Box>
-                    {/* Right image */}
+                    {/* Right image container - align image to top */}
                     <Box
                         sx={{
-                            position: "absolute",
-                            right: { xs: 0, md: 60 },
-                            top: { xs: 50, md: 80 },
-                            width: { xs: 180, sm: 250, md: 360 },
-                            height: { xs: 280, sm: 400, md: 480 },
-                            // borderRadius: "16px",
-                            boxShadow: 4,
-                            zIndex: 2,
-                            overflow: 'hidden',
+                            width: { xs: 240, sm: 340, md: 480 },
+                            height: { xs: 440, sm: 700, md: 960 }, // match center image height
+                            display: 'flex',
+                            alignItems: 'flex-start',
+                            justifyContent: 'center',
+                            pt: { xs: 4, sm: 8, md: 40}, // push image further down
+                            pb: { xs: 1, sm: 2,  }, // add bottom padding to move image down
+                            ml: { xs: -2, sm: -4, md: -10 }, // move even closer to center image
                         }}
                     >
                         <Box
-                            component="img"
-                            src={model3}
-                            alt="Model 3"
                             sx={{
-                                width: '100%',
-                                height: '100%',
-                                objectFit: "cover",
-                                transition: 'transform 0.5s cubic-bezier(0.4,0,0.2,1)',
-                                '&:hover': {
-                                    transform: 'scale(1.08)',
-                                },
-                                display: 'block',
+                                width: { xs: 180, sm: 260, md: 340 },
+                                height: { xs: 240, sm: 330, md: 450 },
+                                overflow: "hidden",
                             }}
-                        />
+                        >
+                            <Box
+                                component="img"
+                                src={model3}
+                                alt="Model 3"
+                                sx={{
+                                    width: '100%',
+                                    height: '100%',
+                                    objectFit: "cover",
+                                    transition: 'transform 0.5s cubic-bezier(0.4,0,0.2,1)',
+                                    '&:hover': {
+                                        transform: 'scale(1.08)',
+                                    },
+                                    display: 'block',
+                                }}
+                            />
+                        </Box>
                     </Box>
                 </Box>
                 {/* Paragraph - Overlapping only center image, not right image */}
                 <Box
                     sx={{
                         position: "absolute",
-                        right: { xs: 0, md: 130 },
-                        bottom: { xs: 0, md: 0 },
-                        width: { xs: "55vw", md: "28vw" },
+                        right: { xs: -40, md: -120 },
+                        bottom: { xs: 40, md: 66 },
+                        width: { xs: "90vw", md: "40vw" },
                         zIndex: 4,
                         pointerEvents: "none",
                     }}
                 >
                     <Typography
                         sx={{
-                            fontSize: { xs: "1.05rem", md: "1.6rem" },
+                            fontSize: { xs: "1.05rem", md: "1.8rem" },
                             color: "#222",
-                            lineHeight: 1.7,
-                            fontStyle: "italic",
+                            // lineHeight: 1.7,
+                            // fontStyle: "italic",
                             textAlign: { xs: "right", md: "left" },
                             // textShadow: "0 2px 8px #fff8",
                         }}
                     >
-                        Lorem Ipsum Dolor Sit Amet Consectetur Sus. Pendisse Tempor Augue Tristique Ultrices Sed. Enim Placerate Mg Consectetur Sus Pendisse. Tempor Augueuis Tempus Viva Mus Vae Hen. Oreni Cras Faucibus.
+                        Lorem Ipsum Dolor Sit Amet Consectetur Sus.<br />
+                        Pendisse Tempor Augue Tristique Ultrices Sed.<br />
+                        Enim Placerate Mg Consectetur Sus Pendisse.<br />
+                        Tempor Augueuis Tempus Viva Mus Vae Hen.<br />
+                        Oreni Cras Faucibus.
                     </Typography>
                 </Box>
             </Box>

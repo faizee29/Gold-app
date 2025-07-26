@@ -87,7 +87,7 @@ function ResponsiveAppBar() {
             </Box>
           </Box>
           {/* Left menu items (md and up) */}
-          <Box sx={{minWidth: 0, overflow: 'hidden', display: { xs: 'none', md: 'flex' }, alignItems: 'center', justifyContent: 'flex-end', gap: { xs: 0.5, md: 1.2, lg: 1.8 } }}>
+          <Box sx={{minWidth: 0, overflow: 'hidden', display: { xs: 'none', md: 'flex' }, alignItems: 'center', justifyContent: 'flex-end', gap: { xs: 0.5, md: 3, lg: 5 } }}>
             {[0,1,2,3].map((i) => (
               <Button
                 key={pages[i]}
@@ -95,7 +95,7 @@ function ResponsiveAppBar() {
                 sx={{
                   color: 'white',
                   fontFamily: 'BaketFashion-DemoVersion-Regular, serif',
-                  fontSize: { xs: '1rem', sm: '1.1rem', md: '1.3rem', lg: '1.5rem' },
+                  fontSize: { xs: '1rem', sm: '1.1rem', md: '1.3rem', lg: '1.6rem' },
                   fontWeight: 'normal',
                   letterSpacing: '0.01em',
                   px: { xs: 0.7, md: 1.2 },
@@ -103,7 +103,6 @@ function ResponsiveAppBar() {
                   background: 'none',
                   boxShadow: 'none',
                   whiteSpace: 'nowrap',
-                  '&:hover': { background: 'none', color: '#D2B49C' },
                 }}
               >
                 {pages[i].split(' ').map(word => word.charAt(0) + word.slice(1).toLowerCase()).join(' ')}
@@ -140,7 +139,7 @@ function ResponsiveAppBar() {
             </Box>
           </Box>
           {/* Right menu items (md and up only) */}
-          <Box sx={{minWidth: 0, overflow: 'hidden', display: { xs: 'none', md: 'flex' }, alignItems: 'center', justifyContent: 'flex-start', gap: { xs: 0.5, md: 1.2, lg: 1.8 } }}>
+          <Box sx={{minWidth: 0, overflow: 'hidden', display: { xs: 'none', md: 'flex' }, alignItems: 'center', justifyContent: 'flex-start', gap: { xs: 0.5, md: 3, lg: 4 } }}>
             {[4,5].map((i) => (
               <Button
                 key={pages[i]}
@@ -156,7 +155,6 @@ function ResponsiveAppBar() {
                   background: 'none',
                   boxShadow: 'none',
                   whiteSpace: 'nowrap',
-                  '&:hover': { background: 'none', color: '#D2B49C' },
                 }}
               >
                 {pages[i].split(' ').map(word => word.charAt(0) + word.slice(1).toLowerCase()).join(' ')}

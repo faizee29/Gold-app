@@ -70,7 +70,10 @@ export default function Signature() {
             fontFamily: 'BaketFashion-DemoVersion-Regular, serif',
             fontSize: { xs: "2rem", sm: "3rem", md: "4.5rem", lg: "6rem" },
             lineHeight: { xs: 1.2, md: 1.1 },
-            px: { xs: 2, sm: 3 }
+            px: { xs: 2, sm: 3 },
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis"
           }}
         >
           Create Your Signature Look
@@ -85,7 +88,11 @@ export default function Signature() {
             lineHeight: { xs: 1.2, md: 1.1 },
             letterSpacing: { xs: 0.5, md: 1 },
             mb: 0,
-            px: { xs: 2, sm: 3 }
+            px: { xs: 2, sm: 3 },
+            textOverflow: "ellipsis",
+            whiteSpace: "nowrap",
+
+
           }}
         >
           Explore Our Collection
